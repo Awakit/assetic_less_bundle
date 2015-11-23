@@ -1,0 +1,32 @@
+{
+    "name" : "awakit/assetic_less_bundle",
+    "description" : "A bundle to add Less in a Symfony Project",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Jonathan Gauvain",
+        "email" : "jgn@awakit.com"
+    }],
+    "keywords" : [
+        "assetic less bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+
+    "require" : {
+        "symfony/assetic-bundle": "~2.3",
+        "oyejorge/less.php": "~1.7.0.9"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Awakit\\AsseticLessBundle" : ""
+        }
+    },
+    "target-dir" : "Awakit/AsseticLessBundle",
+
+    "extra" : {
+        "branch-alias" : {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
