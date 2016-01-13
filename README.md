@@ -1,3 +1,15 @@
+Adding GitHub repository
+========================
+
+Setup new remote called 'github' :
+
+git remote add github https://awakit:!awakit2k15!@github.com/Awakit/assetic_less_bundle.git
+
+Push stuff :
+
+git push github
+
+
 Installation instruction
 ===================
 
