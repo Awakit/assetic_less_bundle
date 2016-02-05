@@ -18,7 +18,7 @@ class LessSourceMapPass implements CompilerPassInterface
     {
         // Activation uniquement en mode debug
         if ($container->getParameter('kernel.debug')) {
-            $lessAsseticFilter = $container->getDefinition('assetic.filter.less');
+            $lessAsseticFilter = $container->getDefinition('assetic.filter.lessphp');
             // Ajout des options au dumper
             $lessAsseticFilter->addMethodCall('addTreeOption', array('outputSourceFiles', true));
             $lessAsseticFilter->addMethodCall('addTreeOption', array('sourceMap', true));
