@@ -3,7 +3,7 @@ Adding GitHub repository
 
 Setup new remote called 'github' :
 
-git remote add github https://awakit:!awakit2k15!@github.com/Awakit/assetic_less_bundle.git
+git remote add github https://github.com/Awakit/assetic_less_bundle.git
 
 Push stuff :
 
