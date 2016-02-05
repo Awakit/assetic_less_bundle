@@ -22,5 +22,10 @@ class AwakitAsseticLessExtension extends Extension
         if (in_array($container->getParameter('kernel.environment'), array('dev', 'test'))) {
             $container->setParameter('assetic.filter.lessphp.class','Awakit\AsseticLessBundle\Filter\LessphpNonCachedFilter');
         }
+
+        $container->setParameter('assetic.filter.lessphp.options',array());
+
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('services.yml');
     }
 }
