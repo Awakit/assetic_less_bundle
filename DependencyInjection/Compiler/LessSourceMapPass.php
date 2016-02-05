@@ -18,12 +18,19 @@ class LessSourceMapPass implements CompilerPassInterface
     {
         // Activation uniquement en mode debug
         if ($container->getParameter('kernel.debug')) {
+            $options       = array(
+                'cache_dir'         => 'less_cache',
+                'compress'          => true,
+                'sourceMap'         => true,
+                'sourceMapWriteTo'  => __DIR__ . '/css/styles.map',
+                'sourceMapURL'      => '/css/styles.map',
+                'sourceRoot'        => '/', // 'http://site.com/' or '/'
+                // 'sourceMapRootpath' => '/', // 'http://site.com/' or '/'
+                'sourceMapBasepath' => __DIR__ ,
+            );
             $lessAsseticFilter = $container->getDefinition('assetic.filter.lessphp');
             // Ajout des options au dumper
-            $lessAsseticFilter->addMethodCall('setOptions', array('sourceMap' => true,
-                'sourceMapWriteTo' => '/var/www/mysite/writable_folder/filename.map',
-                'sourceMapURL'    => '/mysite/writable_folder/filename.map',
-                ));
+            $lessAsseticFilter->addMethodCall('setOptions', $options);
             //$lessAsseticFilter->addMethodCall('addTreeOption', );
         }
     }
