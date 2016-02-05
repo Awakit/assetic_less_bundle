@@ -20,7 +20,10 @@ class LessSourceMapPass implements CompilerPassInterface
         if ($container->getParameter('kernel.debug')) {
             $lessAsseticFilter = $container->getDefinition('assetic.filter.lessphp');
             // Ajout des options au dumper
-            $lessAsseticFilter->addMethodCall('setOptions', array(array('outputSourceFiles' => true, 'sourceMap' => true)));
+            $lessAsseticFilter->addMethodCall('setOptions', array('sourceMap' => true,
+                'sourceMapWriteTo' => '/var/www/mysite/writable_folder/filename.map',
+                'sourceMapURL'    => '/mysite/writable_folder/filename.map',
+                ));
             //$lessAsseticFilter->addMethodCall('addTreeOption', );
         }
     }
