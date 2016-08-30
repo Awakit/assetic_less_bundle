@@ -1,0 +1,11 @@
+services:
+    assetic.filter.lessphp:
+        class: "%assetic.filter.lessphp.class%"
+        tags:
+            - { name: "assetic.filter", alias: "lessphp" }
+        calls:
+            - [setPresets, [%assetic.filter.lessphp.presets%]]
+            - [setLoadPaths, [%assetic.filter.lessphp.paths%]]
+            - [setFormatter, [%assetic.filter.lessphp.formatter%]]
+            - [setPreserveComments, [%assetic.filter.lessphp.preserve_comments%]]
+            - [setOptions, [%assetic.filter.lessphp.options%]]

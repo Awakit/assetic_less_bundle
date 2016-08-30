@@ -19,7 +19,7 @@ Add those lines to your composer.json
 
     "require": {
         ...
-      "awakit/assetic_less_bundle": "~1.0"
+      "awakit/assetic_less_bundle": "~2.0"
     },
 
     "repositories": [
@@ -34,8 +34,7 @@ Change your config.yml to look like:
 
     assetic:
         filters:
-            lessphp:
-                file: %kernel.root_dir%/../vendor/oyejorge/less.php/lessc.inc.php
+            lessphp: ~
      
 You can also add a sourcemap for less files, add these lines and configure if needed
     
