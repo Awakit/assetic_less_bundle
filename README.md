@@ -24,8 +24,12 @@ Add those lines to your composer.json
 
     "repositories": [
         ...
-        { "type": "composer", "url": "http://packages.awakit:8000/" }
+        { "type": "vcs", "url": "git@github.com:Awakit/assetic_less_bundle.git" }
     ],
+    "config": {
+        ...
+        "secure-http": false
+    },
 
 
 ### config
