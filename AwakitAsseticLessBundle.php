@@ -8,5 +8,5 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class AwakitAsseticLessBundle extends Bundle
 {
-    
+
 }
